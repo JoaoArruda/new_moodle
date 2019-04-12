@@ -10,16 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_04_06_013714) do
-=======
-ActiveRecord::Schema.define(version: 2019_04_06_010156) do
->>>>>>> 46b7bf2f11b37551d2b01a5f4ff1978bd00a37be
+ActiveRecord::Schema.define(version: 2019_04_12_004831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
+  create_table "aulas", force: :cascade do |t|
+    t.bigint "disciplina_id"
+    t.date "data"
+    t.string "objetivo"
+    t.string "realizado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["disciplina_id"], name: "index_aulas_on_disciplina_id"
+  end
+
   create_table "cadastros", force: :cascade do |t|
     t.string "nome_aluno"
     t.string "pai"
@@ -30,19 +35,22 @@ ActiveRecord::Schema.define(version: 2019_04_06_010156) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "disciplinas", force: :cascade do |t|
+    t.string "nome"
+    t.integer "carga_horaria"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "usuarios", force: :cascade do |t|
     t.string "nome_aluno"
     t.string "pai"
     t.string "mae"
     t.string "endereco"
     t.integer "documento"
-=======
-  create_table "disciplinas", force: :cascade do |t|
-    t.string "nome"
-    t.integer "carga_horaria"
->>>>>>> 46b7bf2f11b37551d2b01a5f4ff1978bd00a37be
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "aulas", "disciplinas"
 end
