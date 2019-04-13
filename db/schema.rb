@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_12_012811) do
+ActiveRecord::Schema.define(version: 2019_04_13_005616) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,26 @@ ActiveRecord::Schema.define(version: 2019_04_12_012811) do
     t.integer "carga_horaria"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "curso_id"
+    t.index ["curso_id"], name: "index_disciplinas_on_curso_id"
+  end
+
+  create_table "matriculas", force: :cascade do |t|
+    t.bigint "usuario_id"
+    t.bigint "curso_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["curso_id"], name: "index_matriculas_on_curso_id"
+    t.index ["usuario_id"], name: "index_matriculas_on_usuario_id"
+  end
+
+  create_table "trabalhos", force: :cascade do |t|
+    t.bigint "disciplina_id"
+    t.date "data_de_entrega"
+    t.string "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["disciplina_id"], name: "index_trabalhos_on_disciplina_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
@@ -59,4 +79,8 @@ ActiveRecord::Schema.define(version: 2019_04_12_012811) do
   end
 
   add_foreign_key "aulas", "disciplinas"
+  add_foreign_key "disciplinas", "cursos"
+  add_foreign_key "matriculas", "cursos"
+  add_foreign_key "matriculas", "usuarios"
+  add_foreign_key "trabalhos", "disciplinas"
 end

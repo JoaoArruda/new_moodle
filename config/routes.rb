@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
+
+  resources :matriculas
+  resources :trabalhos
+
   resources :cursos
   resources :aulas
+
   resources :usuarios
 
   resources :disciplinas

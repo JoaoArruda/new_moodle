@@ -10,6 +10,11 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= form.label :curso_id %>
+    <%= form.select(:curso_id, 
+              Curso.all.collect {|cl| [cl.nome]}) %>
+  </div>
 
   <div class="field">
     <%= form.label :nome %>
