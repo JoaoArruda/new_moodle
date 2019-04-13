@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :notas
   resources :professores
   resources :alunos
   resources :trabalhos
