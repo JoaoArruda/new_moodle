@@ -13,8 +13,15 @@
 
   <div class="field">
     <%= form.label :disciplina_id %>
-    <%= form.text_field :disciplina_id %>
+    <%= form.select(:disciplina_id, 
+              Disciplina.all.collect {|cl| [cl.nome, cl.carga_horaria]}) %>
   </div>
+  
+  <div class="field">
+  <%= form.label :curso_id %>
+  <%= form.select(:curso_id, 
+            Curso.all.collect {|cl| [cl.nome]}) %>
+</div>
 
   <div class="field">
     <%= form.label :data %>
