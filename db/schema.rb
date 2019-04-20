@@ -32,16 +32,6 @@ ActiveRecord::Schema.define(version: 2019_04_13_012713) do
     t.index ["disciplina_id"], name: "index_aulas_on_disciplina_id"
   end
 
-  create_table "cadastros", force: :cascade do |t|
-    t.string "nome_aluno"
-    t.string "pai"
-    t.string "mae"
-    t.string "endereco"
-    t.integer "documento"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "cursos", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", null: false

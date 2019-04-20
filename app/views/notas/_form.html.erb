@@ -18,17 +18,20 @@
 
   <div class="field">
     <%= form.label :aluno_id %>
-    <%= form.text_field :aluno_id %>
+    <%= form.select(:aluno_id,
+                      Aluno.all.collect{|cl|[cl.nome]}) %>
   </div>
 
   <div class="field">
     <%= form.label :professor_id %>
-    <%= form.text_field :professor_id %>
+    <%= form.select(:professor_id,
+    Aluno.all.collect{|cl|[cl.nome]}) %>
   </div>
 
   <div class="field">
     <%= form.label :disciplina_id %>
-    <%= form.text_field :disciplina_id %>
+    <%= form.select :disciplina_id,
+    Disciplina.all.collect{|cl|[cl.nome, cl.carga_horaria]} %>
   </div>
 
   <div class="actions">
