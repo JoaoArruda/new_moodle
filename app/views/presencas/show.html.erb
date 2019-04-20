@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Disciplina:</strong>
+  <%= @presenca.disciplina %>
+</p>
+
+<p>
+  <strong>Belongs to:</strong>
+  <%= @presenca.belongs_to %>
+</p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @presenca.aluno %>
+</p>
+
+<p>
+  <strong>Belongs to:</strong>
+  <%= @presenca.belongs_to %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @presenca.data %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @presenca.curso %>
+</p>
+
+<%= link_to 'Edit', edit_presenca_path(@presenca) %> |
+<%= link_to 'Back', presencas_path %>

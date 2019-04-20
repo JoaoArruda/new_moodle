@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  disciplina: MyString
+  belongs_to: MyString
+  aluno: MyString
+  belongs_to: MyString
+  data: 2019-04-20
+  curso: one
+
+two:
+  disciplina: MyString
+  belongs_to: MyString
+  aluno: MyString
+  belongs_to: MyString
+  data: 2019-04-20
+  curso: two
