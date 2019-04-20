@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_04_13_005616) do
-
 ActiveRecord::Schema.define(version: 2019_04_13_012713) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +57,6 @@ ActiveRecord::Schema.define(version: 2019_04_13_012713) do
     t.index ["curso_id"], name: "index_disciplinas_on_curso_id"
   end
 
-<<<<<<< HEAD
   create_table "matriculas", force: :cascade do |t|
     t.bigint "usuario_id"
     t.bigint "curso_id"
@@ -69,7 +64,8 @@ ActiveRecord::Schema.define(version: 2019_04_13_012713) do
     t.datetime "updated_at", null: false
     t.index ["curso_id"], name: "index_matriculas_on_curso_id"
     t.index ["usuario_id"], name: "index_matriculas_on_usuario_id"
-=======
+  end
+
   create_table "notas", force: :cascade do |t|
     t.float "nota"
     t.bigint "aluno_id"
@@ -87,7 +83,6 @@ ActiveRecord::Schema.define(version: 2019_04_13_012713) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["usuario_id"], name: "index_professores_on_usuario_id"
->>>>>>> 77733b7f41b7e17a0f6b80b5c48aa71990291fef
   end
 
   create_table "trabalhos", force: :cascade do |t|
@@ -112,14 +107,11 @@ ActiveRecord::Schema.define(version: 2019_04_13_012713) do
   add_foreign_key "alunos", "usuarios"
   add_foreign_key "aulas", "disciplinas"
   add_foreign_key "disciplinas", "cursos"
-<<<<<<< HEAD
   add_foreign_key "matriculas", "cursos"
   add_foreign_key "matriculas", "usuarios"
-=======
   add_foreign_key "notas", "alunos"
   add_foreign_key "notas", "disciplinas"
   add_foreign_key "notas", "professores"
   add_foreign_key "professores", "usuarios"
->>>>>>> 77733b7f41b7e17a0f6b80b5c48aa71990291fef
   add_foreign_key "trabalhos", "disciplinas"
 end
