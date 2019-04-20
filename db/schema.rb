@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_13_012713) do
+ActiveRecord::Schema.define(version: 2019_04_19_224320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2019_04_13_012713) do
     t.bigint "disciplina_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "nota_minima_float"
     t.index ["aluno_id"], name: "index_notas_on_aluno_id"
     t.index ["disciplina_id"], name: "index_notas_on_disciplina_id"
     t.index ["professor_id"], name: "index_notas_on_professor_id"
