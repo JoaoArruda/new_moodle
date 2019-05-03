@@ -24,6 +24,7 @@ class AlunosController < ApplicationController
   # POST /alunos
   # POST /alunos.json
   def create
+    
     @aluno = Aluno.new(aluno_params)
 
     respond_to do |format|

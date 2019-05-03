@@ -14,12 +14,7 @@
   <div class="field">
     <%= form.label :usuario_id %>
     <%= form.select(:usuario_id,
-                    Usuario.all.collect{|cl|[cl.nome_aluno, 
-                    cl.email, 
-                    cl.telefone, 
-                    cl.pai, 
-                    cl.mae, 
-                    cl. documento]}) %>
+                    Usuario.all.collect{|cl|[cl.nome_aluno, cl.id]}) %>
   </div>
 
   <div class="actions">

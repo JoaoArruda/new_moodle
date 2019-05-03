@@ -13,7 +13,7 @@
   <tbody>
     <% @professores.each do |professor| %>
       <tr>
-        <td><%= professor.usuario %></td>
+        <td><%= professor.usuario.nome_aluno %></td>
         <td><%= link_to 'Show', professor %></td>
         <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
         <td><%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>

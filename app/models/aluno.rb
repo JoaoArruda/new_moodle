@@ -1,3 +1,4 @@
 class Aluno < ApplicationRecord
-  validates :usuario presence: true
+  belongs_to :usuario
+  validates :usuario, presence: true
 end
