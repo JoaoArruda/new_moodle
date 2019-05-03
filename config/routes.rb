@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+  resources :nota_trab
   resources :presencas
   resources :matriculas
 

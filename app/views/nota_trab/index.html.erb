@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nota Trab</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nota</th>
+      <th>Aluno</th>
+      <th>Professor</th>
+      <th>Disciplina</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nota_trab.each do |nota_trab| %>
+      <tr>
+        <td><%= nota_trab.nota %></td>
+        <td><%= nota_trab.aluno %></td>
+        <td><%= nota_trab.professor %></td>
+        <td><%= nota_trab.disciplina %></td>
+        <td><%= link_to 'Show', nota_trab %></td>
+        <td><%= link_to 'Edit', edit_nota_trab_path(nota_trab) %></td>
+        <td><%= link_to 'Destroy', nota_trab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nota Trab', new_nota_trab_path %>

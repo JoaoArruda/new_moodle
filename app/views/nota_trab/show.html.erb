@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nota:</strong>
+  <%= @nota_trab.nota %>
+</p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @nota_trab.aluno %>
+</p>
+
+<p>
+  <strong>Professor:</strong>
+  <%= @nota_trab.professor %>
+</p>
+
+<p>
+  <strong>Disciplina:</strong>
+  <%= @nota_trab.disciplina %>
+</p>
+
+<%= link_to 'Edit', edit_nota_trab_path(@nota_trab) %> |
+<%= link_to 'Back', nota_trab_index_path %>
