@@ -7,17 +7,17 @@
 
 <p>
   <strong>Aluno:</strong>
-  <%= @nota.aluno %>
+  <%= @nota.aluno.usuario.nome_aluno %>
 </p>
 
 <p>
   <strong>Professor:</strong>
-  <%= @nota.professor %>
+  <%= @nota.professor.usuario.nome_aluno %>
 </p>
 
 <p>
   <strong>Disciplina:</strong>
-  <%= @nota.disciplina %>
+  <%= @nota.disciplina.nome %>
 </p>
 
 <%= link_to 'Edit', edit_nota_path(@nota) %> |

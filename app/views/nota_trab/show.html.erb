@@ -7,17 +7,17 @@
 
 <p>
   <strong>Aluno:</strong>
-  <%= @nota_trab.aluno %>
+  <%= @nota_trab.aluno.usuario.nome_aluno %>
 </p>
 
 <p>
   <strong>Professor:</strong>
-  <%= @nota_trab.professor %>
+  <%= @nota_trab.professor.usuario.nome_aluno %>
 </p>
 
 <p>
   <strong>Disciplina:</strong>
-  <%= @nota_trab.disciplina %>
+  <%= @nota_trab.disciplina.nome %>
 </p>
 
 <%= link_to 'Edit', edit_nota_trab_path(@nota_trab) %> |

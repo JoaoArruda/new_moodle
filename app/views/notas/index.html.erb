@@ -17,9 +17,9 @@
     <% @notas.each do |nota| %>
       <tr>
         <td><%= nota.nota %></td>
-        <td><%= nota.aluno %></td>
-        <td><%= nota.professor %></td>
-        <td><%= nota.disciplina %></td>
+        <td><%= nota.aluno.usuario.nome_aluno %></td>
+        <td><%= nota.professor.usuario.nome_aluno %></td>
+        <td><%= nota.disciplina.nome %></td>
         <td><%= link_to 'Show', nota %></td>
         <td><%= link_to 'Edit', edit_nota_path(nota) %></td>
         <td><%= link_to 'Destroy', nota, method: :delete, data: { confirm: 'Are you sure?' } %></td>
